@@ -50,7 +50,10 @@ export class LandingPageComponent implements OnInit {
 
     this.myAjax.thirdRequest(this.singularInsert).subscribe(
       data => {
-        // console.log(data);
+        // console.log(data);//sonar 0
+		// console.log(data);//sonar 1
+		// console.log(data);//sonar 2
+		// console.log(data);//sonar 3 
 
         const ourField = 'message';
         this.thirdDisplay =data[ourField];
