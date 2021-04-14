@@ -1,0 +1,60 @@
+<div class="container">
+    <!-- FIRST BUTTON HTML -->
+<div class="row spacer otherfont">
+    <h1>WELCOME TO THE FULLSTACK ANGULAR-JAVALIN CONNECTION EXAMPLE</h1>
+</div>
+
+<div class="row spacer">
+    <div class="col-8">
+        <h3>Simple AJAX data retrieval: </h3><br>
+        <h5>Name: {{ firstDisplay.name}}</h5><br>
+        <h5>Superpower: {{ firstDisplay.superpower}}</h5><br>
+        <h5>Bounty: {{ firstDisplay.bounty}}</h5><br>
+    </div>
+    <div class="col-4">
+        <input type="number" [(ngModel)]='singularSearch'><br> 
+        <button type="button" class="btn btn-info" (click)="firstButton()">First</button>
+    </div>
+</div>
+<!-- SECOND BUTTON HTML -->
+<div class="row spacer">
+    <div class="col-8">
+        <h3>Retrieve an entire table of data:</h3>
+        <div class='table-responsive'>
+                <table class='table' *ngIf='secondDisplay && secondDisplay.length'>
+                  <thead>
+                    <tr>
+                      <th>Id</th>
+                      <th>Name</th>
+                      <th>Superpower</th>
+                      <th>Bounty</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor='let temp of secondDisplay'>
+                      <td>{{temp.shumanId}}</td>
+                      <td>{{temp.name}}</td>
+                      <td>{{temp.superpower}}</td>
+                      <td>{{temp.bounty}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+    </div>
+    <div class="col-4">
+        <button type="button" class="btn btn-success" (click)="secondButton()">Second</button>
+    </div>
+</div>
+<!-- THIRD BUTTON HTML -->
+<div class="row spacer">
+    <div class="col-8">
+        <h3>Insert a new SHuman: {{thirdDisplay}}</h3>
+    </div>
+    <div class="col-4">
+        <input type="text" [(ngModel)]='singularInsert.name'><br> 
+        <input type="text" [(ngModel)]='singularInsert.superpower'><br> 
+        <input type="number" [(ngModel)]='singularInsert.bounty'><br> 
+        <button type="button" class="btn btn-dark" (click)="thirdButton()">Third</button>
+    </div>
+</div>
+</div>
