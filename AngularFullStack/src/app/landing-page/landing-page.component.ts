@@ -28,11 +28,6 @@ export class LandingPageComponent implements OnInit {
       data => {
         this.firstDisplay =  data;
         console.log(data);
-		
-        // console.log(data);//sonar 0
-		// console.log(data);//sonar 1
-		// console.log(data);//sonar 2
-		// console.log(data);//sonar 3 
       }
     );
   }
